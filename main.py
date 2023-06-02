@@ -1,8 +1,7 @@
 import cv2
 import matplotlib.pyplot as plt
 import os
-#import pytesseract
-from numpy.typing import NDArray
+import pytesseract
 
 IMG_DEBUG = False
 
@@ -29,7 +28,7 @@ def moto_plate_extract(image,
                                                               scaleFactor=1.1,
                                                               minNeighbors=5)
     for x, y, w, h in cascade_rus16_rects: # + cascade_np_rects:
-        moto_plate_image = image[y+15:y+h-10, x+15:x+w-20]
+        moto_plate_image = image[y-20:y+h+10, x-20:x+w+10]
     return moto_plate_image
 
 
@@ -80,6 +79,12 @@ def main():
         plt.show()
     if moto_plate_extract_img.size > 0:
         cv2.imwrite('result.jpg', moto_plate_extract_img)
+
+    print("Number plate: ",pytesseract.image_to_string(
+        moto_plate_extract_img,
+        config='--psm 6 --oem 1 -c tessedit_char_whitelist=ABCEHKMOPTXY0123456789'
+    )
+          )
 
 if __name__ == '__main__':
     main()
