@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="107f93a5-edc7-48e4-b624-b8ae2f29963d" name="Changes" comment="Disabled typehints to use 3.9 python">
+    <list default="true" id="107f93a5-edc7-48e4-b624-b8ae2f29963d" name="Changes" comment="- Fixed clause for saving image">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +86,28 @@
       <option name="project" value="LOCAL" />
       <updated>1685741331319</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- DEBUG_IMG constant for config&#10;- Saving result image">
+      <created>1685741824264</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685741824264</updated>
+    </task>
+    <task id="LOCAL-00005" summary="- DEBUG_IMG constant for config&#10;- Saving result image">
+      <created>1685741895360</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685741895360</updated>
+    </task>
+    <task id="LOCAL-00006" summary="- Fixed clause for saving image">
+      <created>1685742201896</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685742201896</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -102,7 +124,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit. Doesn't work on windows, need to try at Linux" />
     <MESSAGE value="Disabled typehints to use 3.9 python" />
-    <option name="LAST_COMMIT_MESSAGE" value="Disabled typehints to use 3.9 python" />
+    <MESSAGE value="- DEBUG_IMG constant for config&#10;- Saving result image" />
+    <MESSAGE value="- Fixed clause for saving image" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fixed clause for saving image" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -124,12 +148,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>23</line>
+          <line>22</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>61</line>
+          <line>60</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
