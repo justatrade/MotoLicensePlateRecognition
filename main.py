@@ -78,7 +78,7 @@ def main():
     if IMG_DEBUG:
         plt.imshow(moto_plate_extract_img)
         plt.show()
-    if moto_plate_extract_img:
+    if moto_plate_extract_img.size > 0:
         cv2.imwrite('result.jpg', moto_plate_extract_img)
 
 if __name__ == '__main__':
