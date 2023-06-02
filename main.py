@@ -4,6 +4,7 @@ import os
 #import pytesseract
 from numpy.typing import NDArray
 
+IMG_DEBUG = False
 
 def load_image(img_path):
     try:
@@ -18,8 +19,9 @@ def load_image(img_path):
 def moto_plate_extract(image,
                        num_pl_haar_cascade,
                        rus16_haar_cascade):
-    cv2.imshow('test', image)
-    cv2.waitKey(0)
+    if IMG_DEBUG:
+        cv2.imshow('test', image)
+        cv2.waitKey(0)
     cascade_np_rects = num_pl_haar_cascade.detectMultiScale(image,
                                                             scaleFactor=1.1,
                                                             minNeighbors=5)
@@ -73,9 +75,11 @@ def main():
                                                 num_pl_haar_cascade,
                                                 rus16_haar_cascade)
     moto_plate_extract_img = enlarge_img(moto_plate_extract_img, 150)
-    plt.imshow(moto_plate_extract_img)
-    plt.show()
-
+    if IMG_DEBUG:
+        plt.imshow(moto_plate_extract_img)
+        plt.show()
+    if moto_plate_extract_img:
+        cv2.imwrite('result.jpg', moto_plate_extract_img)
 
 if __name__ == '__main__':
     main()
