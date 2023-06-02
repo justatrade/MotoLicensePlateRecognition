@@ -5,7 +5,7 @@ import os
 from numpy.typing import NDArray
 
 
-def load_image(img_path) -> NDArray | None:
+def load_image(img_path):
     try:
         number_plate_img = cv2.imread(img_path)
         number_plate_img = cv2.cvtColor(number_plate_img, cv2.COLOR_BGR2GRAY)
